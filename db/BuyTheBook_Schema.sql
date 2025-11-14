@@ -13,7 +13,7 @@ USE bookstore;
 --   PRIMARY KEY (`id`));
 
 -- Create Table Author on DB
-CREATE TABLE `bookstore`.`Author` (
+CREATE TABLE IF NOT EXISTS `bookstore`.`Author` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `firstName` VARCHAR(45) NOT NULL,
   `lastName` VARCHAR(45) NOT NULL,
@@ -22,7 +22,7 @@ CREATE TABLE `bookstore`.`Author` (
   PRIMARY KEY (`id`));
 
 -- Create Table Book after Author because of FK constraint to Author Tbl
-CREATE TABLE `bookstore`.`Book` (
+CREATE TABLE IF NOT EXISTS `bookstore`.`Book` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `title` VARCHAR(255) NOT NULL,
   `genre` VARCHAR(255) NOT NULL,
@@ -44,7 +44,7 @@ CREATE TABLE `bookstore`.`Book` (
 
 
 -- Create Table Cart
-CREATE TABLE `bookstore`.`Cart` (
+CREATE TABLE IF NOT EXISTS `bookstore`.`Cart` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `quantity` INT NOT NULL,
   `price` DECIMAL(13,2) NOT NULL,
