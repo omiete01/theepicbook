@@ -7,7 +7,7 @@ USE bookstore_db;
 **/
 
 -- Insert Books into Book Table
-INSERT INTO Book(title,genre,pubYear,price,inventory,bookDescription,createdAt,updatedAt,AuthorId) 
+INSERT IGNORE INTO Book(title,genre,pubYear,price,inventory,bookDescription,createdAt,updatedAt,AuthorId) 
 
 -- Values are || Title | Genre | Published Year | Price | Inventory | Description | Created DtTm | Updated DtTm | Author ID ||
 VALUES 
