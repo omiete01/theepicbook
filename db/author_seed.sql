@@ -1,7 +1,7 @@
 USE bookstore;
 
 -- Insert Books into Book Table
-INSERT INTO Author(firstName,lastName,createdAt,updatedAt) 
+INSERT IGNORE INTO Author(firstName,lastName,createdAt,updatedAt) 
 VALUES
 ('Elin','Hildebrand',sysdate(),sysdate())
 ,('Brit','Bennett',sysdate(),sysdate())
